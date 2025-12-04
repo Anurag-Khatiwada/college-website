@@ -5,6 +5,7 @@ export const programsData = {
     abbreviation: "BCA",
     level: "Undergraduate",
     duration: "4 Academic Years (8 Semesters)",
+    faculty: "Science & Technology",
     description: "Bachelor of Computer Application (BCA) is a 4-year (eight semesters) program designed to provide comprehensive knowledge in computer science and information technology. Students gain expertise in programming languages, database management systems, web technologies, and software engineering principles.",
     
     highlights: [
@@ -143,6 +144,7 @@ export const programsData = {
     abbreviation: "BBA",
     level: "Undergraduate",
     duration: "4 Academic Years (8 Semesters)",
+    faculty: "Management",
     description: "Bachelor of Business Administration (BBA) is a comprehensive 4-year program that equips students with essential business management skills. The curriculum covers finance, marketing, human resources, entrepreneurship, and strategic management with real-world case studies and practical applications.",
     
     highlights: [
@@ -281,6 +283,7 @@ export const programsData = {
     abbreviation: "BCE",
     level: "Undergraduate",
     duration: "4 Academic Years (8 Semesters)",
+    faculty: "Science & Technology",
     description: "Bachelor of Civil Engineering (BCE) is a 4-year program focusing on the design, construction, and maintenance of physical and naturally built environments. Students learn structural analysis, construction management, sustainable design, and project planning with hands-on practical experience.",
     
     highlights: [
@@ -420,6 +423,7 @@ export const programsData = {
     abbreviation: "BCE",
     level: "Undergraduate",
     duration: "4 Academic Years (8 Semesters)",
+    faculty: "Science & Technology",
     description: "Bachelor of Computer Engineering (BCE) is a 4-year program that combines hardware and software engineering principles. Students gain expertise in computer architecture, embedded systems, VLSI design, networking, and emerging technologies with strong practical and theoretical foundations.",
     
     highlights: [
@@ -559,6 +563,7 @@ export const programsData = {
     abbreviation: "BIT",
     level: "Undergraduate",
     duration: "4 Academic Years (8 Semesters)",
+    faculty: "Science & Technology",
     description: "Bachelor of Information Technology (BIT) is a 4-year program focused on IT infrastructure, systems administration, cybersecurity, and cloud computing. Students develop expertise in managing IT systems, network security, database administration, and emerging technologies.",
     
     highlights: [
@@ -697,6 +702,7 @@ export const programsData = {
     abbreviation: "MCA",
     level: "Postgraduate",
     duration: "2 Academic Years (4 Semesters)",
+    faculty: "Science & Technology",
     description: "Master of Computer Application (MCA) is a 2-year postgraduate program designed for BCA graduates and IT professionals seeking advanced specialization. The program focuses on advanced programming, research methodologies, emerging technologies, and prepares students for leadership roles in IT industry.",
     
     highlights: [
@@ -795,6 +801,7 @@ export const programsData = {
     abbreviation: "MAMCJ",
     level: "Postgraduate",
     duration: "2 Academic Years (4 Semesters)",
+    faculty: "Humanities",
     description: "Master of Arts in Mass Communication & Journalism (MAMCJ) is a 2-year postgraduate program that develops expertise in multimedia journalism, communication theory, digital media production, and media research. Students gain practical skills in reporting, editing, broadcasting, and digital content creation.",
     
     highlights: [
@@ -893,6 +900,7 @@ export const programsData = {
     abbreviation: "PGDCA",
     level: "Postgraduate Studies",
     duration: "1 Academic Year (2 Semesters)",
+    faculty: "Science & Technology",
     description: "Post Graduate Diploma in Computer Application (PGDCA) is an intensive 1-year program designed for professionals transitioning to IT careers. The program focuses on practical development skills, programming languages, database management, and industry-ready applications with hands-on training.",
     
     highlights: [

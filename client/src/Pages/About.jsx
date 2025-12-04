@@ -1,10 +1,24 @@
-import { useEffect, useRef } from 'react'
+import { useState } from 'react'
 import Navbar from "../Components/Navbar"
 import Footer from "../Components/Footer"
 import Facilities from "../Components/Facilities"
 import TeacherCard from "../Components/TeacherCard"
+import Prospectus from "../Components/Prospectus"
 
 const About = () => {
+  const [isPaused, setIsPaused] = useState(false)
+
+  const scrollCarousel = (direction) => {
+    const carousel = document.querySelector('.teacher-carousel')
+    if (carousel) {
+      const scrollAmount = 400
+      carousel.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      })
+    }
+  }
+
   return (
     <>
       <Navbar />
@@ -73,7 +87,7 @@ const About = () => {
           </div>
         </div>
       </section>
-
+      <Prospectus />
       {/* Vision, Mission & Objectives Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -201,7 +215,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Teachers Section with Infinite Carousel */}
+      {/* Teachers Section with Carousel and Arrow Controls */}
       <section className="py-20 bg-gray-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <div className="text-center">
@@ -210,9 +224,37 @@ const About = () => {
           </div>
         </div>
 
-        {/* Infinite Carousel */}
+        {/* Carousel with Arrow Controls */}
         <div className="relative">
-          <div className="flex animate-scroll">
+          {/* Left Arrow */}
+          <button
+            onClick={() => scrollCarousel('left')}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors duration-200 group"
+            aria-label="Scroll left"
+          >
+            <svg className="w-6 h-6 text-gray-700 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Right Arrow */}
+          <button
+            onClick={() => scrollCarousel('right')}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors duration-200 group"
+            aria-label="Scroll right"
+          >
+            <svg className="w-6 h-6 text-gray-700 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          {/* Carousel Container */}
+          <div 
+            className="teacher-carousel flex overflow-x-auto scrollbar-hide scroll-smooth"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
             {/* First set of teachers */}
             <TeacherCard
               name="Dr. Prakash Sharma"
@@ -280,7 +322,7 @@ const About = () => {
               }}
             />
 
-            {/* Duplicate set for infinite scroll */}
+            {/* Duplicate set for infinite scroll effect */}
             <TeacherCard
               name="Dr. Prakash Sharma"
               designation="Associate Professor"

@@ -1,6 +1,6 @@
 import Navbar from "../Components/Navbar"
 import Hero from "../Components/Hero"
-import Features from "../Components/Features"
+import QuickLinks from "../Components/QuickLinks"
 import WhyChoose from "../Components/WhyChoose"
 import NewsEvents from "../Components/NewsEvents"
 import Footer from "../Components/Footer"
@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <Navbar />
       <Hero />
-      <Features />
+      <QuickLinks />
       <WhyChoose />
       <NewsEvents />
       <Footer />

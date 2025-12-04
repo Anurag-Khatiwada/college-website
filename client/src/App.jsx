@@ -8,6 +8,10 @@ import About from './Pages/About'
 import Programs from './Pages/Programs'
 import Program from './Pages/Program'
 import Notice from './Pages/Notice'
+import Gallery from './Pages/Gallery'
+import Contact from './Pages/Contact'
+import NewsEvents from './Pages/NewsEvents'
+import NewsDetail from './Pages/NewsDetail'
 
 const App = () => {
   const [loading, setLoading] = useState(true)
@@ -34,6 +38,10 @@ const App = () => {
           <Route path="/programs" element={<Programs />} />
           <Route path="/program/:id" element={<Program />} />
           <Route path="/notice" element={<Notice />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/news-events" element={<NewsEvents />} />
+          <Route path="/news-events/:slug" element={<NewsDetail />} />
         </Routes>
       )}
     </>

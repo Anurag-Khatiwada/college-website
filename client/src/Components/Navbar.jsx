@@ -19,11 +19,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
+          <Link to="/">
           <div className="flex items-center space-x-3">
             <div className="w-40 h-10 bg-blue-900 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">Narayani College</span>
             </div>
           </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
